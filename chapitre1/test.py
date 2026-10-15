@@ -1,2 +1,6 @@
 print("toto")
 print("Temps de chauffe de l'eau pour le thé : ", 4 * 60)
+print("Temps total : ", 4 * 60 + 3 * 60)
+print(Notes : 12, 15 et 9)
+print("Somme : ", 12 + 15 + 9)
+
