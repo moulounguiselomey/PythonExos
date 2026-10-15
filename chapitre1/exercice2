@@ -1,25 +1,61 @@
 
-#Demande à l'utilisateur de saisir son nom (input est uen fonction)
-nom = input("Comment vous appelez-vous ? ")
-#Demande à l'utilisateur de saisir son âge
-age = int(input("Quel est votre âge ? "))
-#Demande à l'utilisateur sa couleur préférée
-couleur = input("Quelle est votre couleur préférée ? ")
-#Demande à l'utilisateur son animal préféré
-animal = input("Quel est votre animal préféré ? ")
-#Affiche un profil de l'utilisateur avec les informations saisies
-print("Prénom : " , nom)
-print("Âge : " , age)
-print("Couleur préférée : " , couleur)
-print("Animal préféré : " , animal)
-print("                    ")
-print(" === MON PROFIL === ")
-print("Salut ! Je m'appelle " , nom)
-print("J'ai " , age , " ans")
-print("Ma couleur préférée est le " , couleur)
-print("Mon animal préféré est le " , animal)
-print(" =================== ")
-print(f"Salut je suis un petit {animal} {couleur} trop mignon !")
+# #Demande à l'utilisateur de saisir son nom (input est une fonction)
+# nom = input("Comment vous appelez-vous ? ")
+# #Demande à l'utilisateur de saisir son âge
+# age = int(input("Quel est votre âge ? "))
+# #Demande à l'utilisateur sa couleur préférée
+# couleur = input("Quelle est votre couleur préférée ? ")
+# #Demande à l'utilisateur son animal préféré
+# animal = input("Quel est votre animal préféré ? ")
+# #Affiche un profil de l'utilisateur avec les informations saisies
+# print("Prénom : " , nom)
+# print("Âge : " , age)
+# print("Couleur préférée : " , couleur)
+# print("Animal préféré : " , animal)
+# print("                    ")
+# print(" === MON PROFIL === ")
+# print("Salut ! Je m'appelle " , nom)
+# print("J'ai " , age , " ans")
+# print("Ma couleur préférée est le " , couleur)
+# print("Mon animal préféré est le " , animal)
+# print(" =================== ")
+# print(f"Salut je suis un petit {animal} {couleur} trop mignon !")
+# print("*********")
+# print(f"*{nom}*")
+# print("*********")
+# #controle slash pour mettre toute une section en commentaire
 
+prix = round(float(input("Quel est le prix du produit ? ")), 2)
+prix_formate = str(prix).replace(".", ",")
+print("Prix TTC : ", prix_formate, "€")
 
+#Formater avec f-string
+print(f"Prix TTC : {prix_formate} €")
+
+nom = "Melvin"
+moyenne = 12.5
+nombre_de_notes = 3
+print(f"Nom : {nom}, Moyenne : {moyenne}, Nombre de notes : {nombre_de_notes}")
+
+#.2f pour arrondir à 2 décimales
+print(f"Nom : {nom}, Moyenne : {moyenne:.2f}, Nombre de notes : {nombre_de_notes}")
+
+# :>10 pour aligner à droite sur 10 caractères
+print(f"Nom : {nom:>10}, Moyenne : {moyenne:.2f}, Nombre de notes : {nombre_de_notes}")
+
+# :<10 pour aligner à gauche sur 10 caractères
+print(f"Nom : {nom:<10}, Moyenne : {moyenne:.2f}, Nombre de notes : {nombre_de_notes}") 
+
+# :^10 pour centrer sur 10 caractères
+print(f"Nom : {nom:^10}, Moyenne : {moyenne:.2f}, Nombre de notes : {nombre_de_notes}") 
+
+#Les caractères d'échappement
+#Saut de ligne : \n
+print("Ceci est une ligne\nCeci est une autre ligne")
+
+# tabulation : \t
+print("Nom\tMoyenne\tNombre de notes")
+
+#guillemets : \" et \"
+print("Il a dit : \"Bonjour !\"")
 
