@@ -59,3 +59,27 @@ print("Nom\tMoyenne\tNombre de notes")
 #guillemets : \" et \"
 print("Il a dit : \"Bonjour !\"")
 
+#backslash : \\
+print("Dossier Windows : C:\\Users\\alice")
+
+#and or
+#a and b : si a est faux le résultat est faux sans évaluer b
+#a or b : si a est vrai le résultat est vrai sans évaluer b
+
+nombre_de_notes = 0 
+sommes_de_notes = 0.0
+if sommes_de_notes > 0 and sommes_de_notes / nombre_de_notes >= 10 :
+    print("moyenne insuffisante")
+else : 
+    print("Moyenne insuffisante")
+    
+est_delegue = True
+if est_delegue or sommes_de_notes / nombre_de_notes >= 16:
+    print("L'élève est invité au conseil de classe")
+
+# truthy & falsy
+#falsy : False, None, 0, 0.0
+#truthy: tout ce qui n'est pas falsy (ex: True , 1, -1, 'Texte', [1,2,3], "0")
+print("bool(0)") ; ", bool()"
+
+

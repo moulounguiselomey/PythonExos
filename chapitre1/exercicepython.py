@@ -11,3 +11,4 @@ age = int(age)
 print("Dans", 100 - age, "ans , vous aurez 100 ans !")    
 #Calculer et ecrire en quelle année l'utilisateur aura 100 ans
 print("Cela sera en", 2026 + (100 - age), "!")
+

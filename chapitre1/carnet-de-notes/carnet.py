@@ -61,20 +61,82 @@
 
 #print("somme : ",somme")
 
-#for répète son bloc pour chaque élément d'une sèquence 
-#range() : génère une sèquence de nombres, ex : range (5) génère les nombres de 0 à 4
-#range(fin): range (0) => -1
-#range(debut, fin) : range(3, 9) les chiffres de 3 à 8
-#range(debut, fin, pas) : range(2, 10, 2) => 2, 4, 6, 8
+for répète son bloc pour chaque élément d'une sèquence 
+range() : génère une sèquence de nombres, ex : range (5) génère les nombres de 0 à 4
+range(fin): range (0) => -1
+range(debut, fin) : range(3, 9) les chiffres de 3 à 8
+range(debut, fin, pas) : range(2, 10, 2) => 2, 4, 6, 8
 
-# for i in range(5): 
-#     print("Tour numéro : ", i, end=" ")
-# print()
-
-# for note in range(0, 21, 5):
-#     print("Note : ", note, end=" ")
-# print()
-
-for i in range(3, -10, -1):
-    print("Note : ", i, end=" ")
+for i in range(5): 
+    print("Tour numéro : ", i, end=" ")
 print()
+
+for note in range(0, 21, 5):
+    print("Note : ", note, end=" ")
+print()
+
+from os import replace
+
+
+print("----BOUCLES----")
+nom_etudiant = input("nom de l'étudiant : ")
+
+note_1 = float(input("Note 1 (sur 20)").replace(",", "."))
+note_2 = float(input("Note 2 (sur 20)").replace(",", "."))
+note_3 = float(input("Note 3 (sur 20)").replace(",", "."))
+
+#Accumulateurs
+sommes_des_notes = 0.0
+nombre_de_notes = 0
+note_minimale = 0
+note_maximale = 20.0
+
+choix = ""
+while choix != "0" :
+    print()
+    print("1 : ajouter une note")
+    print("2 : ajouter plusieurs notes au menu")
+    print("3 : afficher le bulletin")
+    print("0 : quitter")
+    choix = input("Votre choix : ")
+
+if choix == "1" :
+    note = float(input("saisir une note sur 20 : ").replace(",", "."))
+    while note < 0 or note > 20 :
+            print("Note invalide : la note doit être entre 0 et 20.")
+    note = float(input("saisir une note sur 20 : ").replace(",", "."))
+    sommes_des_notes += note
+    nombre_de_notes += 1
+    if note < note_minimale:
+            note_minimale = note
+    if note > note_maximale:
+            note_maximale = note
+
+    print(f"Note {note:.2f} enregistrée")
+    
+elif choix == "2" :
+    quantite = int(input("Combien de notes voulez-vous rajouter?"))
+    for numero in range(1, quantite +1)
+        note = float(input(f"Note {numero} sur {quantite}" : ).replace(",", "."))
+        #une note incorecte est entrée
+    while note < 0 or note > 20 :
+                print("Note invalide : la note doit être entre 0 et 20.")
+    note = float(input("saisir une note sur 20 : ").replace(",", "."))
+    sommes_des_notes += note
+    nombre_de_notes += 1
+        
+elif choix == "3":
+    if nombre_de_notes == 0:
+        print("Aucune note enregistrée")
+    else:
+        moyenne = sommes_des_notes / nombre_de_notes
+        print(f"Bulletin de {nom_etudiant} :")
+        print(f"Nombre de notes : {nombre_de_notes}")
+        print(f"Moyenne : {moyenne:.2f}/20")
+elif choix == "0": 
+    print("Au revoir")
+else: 
+    print("Choix invalide : tapez 1, 3 ou 0. ")
+
+
+

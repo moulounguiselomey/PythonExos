@@ -63,7 +63,73 @@ note = float(input("Quelle est la note ? ").replace(",", "."))
 if note >= 10 :
     print("Bravo vous avez la moyenne")
     print("Continue comme ça")
+
+elif note >= 8:
+    print("Vous êtes proche de la moyenne")
+    print("Il faut un petit effort supplémentaire")
+
 else: 
     print("Vous n'avez pas la moyenne")
     print("Il faut travailler davantage")
+    
+print("Fin du programme")
+
+#indentation correspond à 4 espaces
+
+#conditions imbriquées
+#v1
+if note >= 14 :
+    print("Imbrication : bon résultat")
+else :
+    if note >= 10 :
+        print("Imbrication: résultat correct")
+    else :
+        print("Imbrication: résultat insuffisant")
+
+#v2 mm logique avec elif
+
+if note >= 14:
+    print("Avec Elif : bon résultat")
+elif note >= 10:
+    print("Avec Elif : résultat correct")
+else :
+    print("Avec Elif : résultat insuffisant")
+    
+#break : permet de sortir immédiatement d'une boucle
+#continue : permet de passer immédiatement à l'itération suivante d'une boucle
+
+# print("Nombres impairs de 1 à 9")
+# for iteration in range(1, 10):
+#     if iteration % 2 == 0 : 
+#         continue #nombrepair on passe à l'itération suivante
+#     print(iteration, end=" ")
+# print()
+
+# print("Recherche du premier multiple de 7 à partir de 50")
+# for nombre in range(50, 100): 
+#     if nombre % 7 == 0:
+#         print("Trouvé : ", nombre)
+#         break
+# print("Fin de la recherche")
+
+# while True: 
+#     responseUser = input("Tapez sur la touche h pour quitter : ")
+#     if responseUser.lower() == "h":
+#         break
+#     print("Fin de la boucle infinie")
+    
+#Les boucles imbriquées
+#en-tête
+print("   ", end=" ")
+for colonne in range(1, 6):
+    print(f" {colonne:>4}", end=" ")
+print()
+print("-" * 24)
+
+for ligne in range(1, 6):
+    print(f"{ligne:>2} | ", end="")
+    for colonne in range(1, 6): 
+        print(f" {ligne * colonne:>4} ", end="")
+    print()
+        
     
