@@ -120,16 +120,20 @@ else :
     
 #Les boucles imbriquées
 #en-tête
-print("   ", end=" ")
-for colonne in range(1, 6):
-    print(f" {colonne:>4}", end=" ")
-print()
-print("-" * 24)
+# print("   ", end=" ")
+# for colonne in range(1, 6):
+#     print(f" {colonne:>4}", end=" ")
+# print()
+# print("-" * 24)
 
-for ligne in range(1, 6):
-    print(f"{ligne:>2} | ", end="")
-    for colonne in range(1, 6): 
-        print(f" {ligne * colonne:>4} ", end="")
-    print()
+# for ligne in range(1, 6):
+#     print(f"{ligne:>2} | ", end="")
+#     for colonne in range(1, 6): 
+#         print(f" {ligne * colonne:>4} ", end="")
+#     print()
         
-    
+#Les fonctions
+def calculer_age(annee_de_naissance):
+    return 2026 - annee_de_naissance
+age = calculer_age(1984)
+print(f"Vous avez {age} ans.")
